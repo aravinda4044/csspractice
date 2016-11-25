@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl" ng-init="show()">
+<head>
+    <meta charset="UTF-8">
+    <title>myhome</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+<body>
+<h1>Welcome to employee management system.</h1>
+<a ui-sref="myhome">myHome</a>
+<a ui-sref="registration">Registration</a>
+
+
+<div ui-view></div>
+
+<script>
+    var app=angular.module('myApp',['ui.router']);
+    app.config(function($stateProvider, $urlRouterProvider) {
+
+        $urlRouterProvider.otherwise('/myhome');
+
+        $stateProvider
+
+
+                .state('registration', {
+                    url: 'registration',
+                    templateUrl:'registration.html',
+                    controller:'myCtrl'
+
+                })
+
+
+                });
+    app.controller('myCtrl',function($scope,$location){
+        $scope.save=function () {
+            $scope.url=$location.absUrl()+"?fname="+$scope.fn+"&lname="+$scope.ln+"&kinid="+$scope.kin+"&age="+$scope.ag;
+            console.log($scope.fn)
+        }
+        $scope.show=function () {
+            $scope.fn=$location.search()['fname'];
+            $scope.ln=$location.search()['lname'];
+            $scope.kin=$location.search()['kinid'];
+            $scope.ag=$location.search()['age'];
+
+        }
+    });
+
+</script>
+</body>
+</html>

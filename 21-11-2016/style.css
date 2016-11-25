@@ -1,0 +1,155 @@
+body{
+    background-color: aqua;
+    background-image: url(farmers.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+    
+}
+p{
+    font-weight:bold
+}
+a:link{color: blue}
+a:visited{color: purple}
+a:hover{font-weight: bold}
+a:active{color:yellow}
+
+.exciting-text::after {
+  content: "<- now this *is* exciting!"; 
+  color: green;
+}
+
+.b::after{
+    content: "<-boaring";
+}
+#container{
+    display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: #8c8c8c;
+  align-content: flex-end; 
+}
+div > div1 {
+  border: 2px solid #8c8c8c;
+  width: 50px;
+  height: 50px;
+  background-color: #a0c8ff;
+}
+img {display: block; 
+width: 500px;
+margin: 50px;
+}
+#dot{border-style: dashed;width: 120}
+#margin{
+    width: 130px;
+ 
+}
+p1.pad{
+    padding-left: 50px;
+    background-color: yellow;
+}
+#hwb{height: 100px;width: 100px;background-color: brown;}
+#box{
+    width: 300px;
+    content: close-quote;
+    padding: 100px;
+    border: 50px solid green;
+    margin-left: 300px;
+    margin-right: 300;
+    background-color: bisque;
+    outline-style: double;
+    outline-color: black;
+    outline-width: 5px;
+}
+h5{font-family: "Times New Roman",Times,serif;}
+p.p2{font-family: "Times New Roman",Times,serif;}
+ul.a{list-style-type: disc}
+ul.b{list-style-type: circle}
+ul.c{list-style-type:decimal-leading-zero}
+
+table,td,th{border-bottom: 1px solid black;padding:8px;text-align: left}
+table{border-collapse: collapse;width: 100%}
+td{height:50px;vertical-align: bottom}
+tr:nth-child(odd){background-color: chartreuse}
+
+div.ex1{
+    max-width: 100px;
+    
+    
+    border: 3px solid #73AD21;
+}
+div.ex2{
+    max-width: 100px;
+    margin-left: 120;
+    position: relative;
+    bottom: 20px;
+    border: 3px solid #73AD21;
+}
+
+.div1{
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border: 3px solid red;
+}
+.div2{
+    border: :1px solid blue;
+}
+.div3{
+    float: right;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border: 3px solid blue;
+    
+}
+.div4{float: left;
+    border: 1px solid red;
+}
+#fl1{
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid red;
+}
+#fl2{
+    float: right;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid red;
+}
+#center{
+    position: relative;
+    top: 300px;
+    text-align: center;border: 1px solid green;
+}
+div>p{
+    background-color: aquamarine
+}
+p::first-line{
+    color: coral;
+    font-variant: small-caps;
+}
+#background{
+    background: url(farmers.jpg) repeat;
+    border:2 px solid black;
+}
+#transbox{
+    margin:30px;
+    background-color: red;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter:alpha(opacit=60);
+}
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+img:hover{
+    opacity: 0.5;
+}
